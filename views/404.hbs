@@ -7,13 +7,7 @@
 	</head>
 
 	<body>
-		<header>
-			<div id = "box">
-				<nav>
-					<a href="/">Главная</a><a href="/about">О сайте</a><a href="/contacts">Контакты</a>
-				</nav>
-			</div>
-		</header>
+		{{> header}}
 
 		<div id = "box">
 			<div id = "content">
@@ -23,32 +17,11 @@
         </div>
 			</div>
 
-			<div id = "sidebar">
-			  <aside>
-			    <div id = "search">
-						<form action="/#" method="get">
-			        <input type="text" id="search-text" placeholder="Введите запрос"/>
-			        <button type="button" class="button">Искать</button>
-			      </form>
-			    </div>
-
-			    <div id = "headings">
-			      <h2>Рубрики</h2>
-			      <ul>
-			        <li><a href="#">Новая рубрика</a> (1)</li>
-							<li><a href="#">Новая рубрика 2</a> (1)</li>
-			      </ul>
-			    </div>
-			  </aside>
-			</div>
+			{{> sidebar}}
 
 			<div id = "clear"></div>
 		</div>
 
-		<footer>
-			<div id = "box">
-				<div id = "footer-text">Copyright © 2017 <strong>VanyakaCompany</strong> | Все права защищены, но кого это волнует...</div>
-			</div>
-		</footer>
+		{{> footer}}
 	</body>
 </html>
