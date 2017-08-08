@@ -1,0 +1,8 @@
+{
+  "name": "vse-sdelano-server",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.15.3",
+    "url": "^0.11.0"
+  }
+}
