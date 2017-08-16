@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Синтаксис handlebars</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<h1>Синтаксис handlebars</h1>
+
+		<p>Их разыскивает полиция:<p>
+		{{#each data}}
+			<div>
+				<b>Имя:</b> {{name}} <br/>
+				<b>Преступления:</b>
+				<ul>
+					{{#each transgressions}}
+						<li>{{this}}</li>
+					{{/each}}
+				</ul>
+
+				<br/><br/>
+			</div>
+		{{/each}}
+	</body>
+</html>
