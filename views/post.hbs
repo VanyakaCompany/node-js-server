@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{title}}</title>
+		<meta charset="utf-8">
+    <link rel="stylesheet" href="/style.css">
+	</head>
+
+	<body>
+		{{> header}}
+
+		<div id = "box">
+			<div id = "content">
+        <div id = "post">
+          <div id="meta">
+					  <span><a href="#comments" title="Комментарии"><img src="/img/comments.png"> <b>0</b></a></span>
+					  <span><a href="#" title="Рубрика"><img src="/img/category.png"> <b>{{category}}</b></a></span>
+					  <span><a href="#" title="Автор"><img src="/img/author.png"> <b>{{author}}</b></a></span>
+					  <span><a href="#" title="Дата создания статьи"><img src="/img/calendar.png"> <b>{{date}}</b></a></span>
+					</div>
+
+          <h2>{{title}}</h2>
+
+          <div id = "post-header-img">
+            <img src="/img/about.png" alt="{{title}}">
+          </div>
+
+          <div>
+						{{{text}}}
+					</div>
+        </div>
+
+				<div id="post">
+					<a id = "comments"></a>
+  				<h3>Добавить комментарий</h3>
+					<form action="#" method="post">
+		        <textarea class="field field_820x160" name="text" placeholder="Введите свой комментарий..."></textarea> <br>
+		        <button type="button" class="button botton_read_to_black">Отправить</button>
+		      </form>
+				</div>
+
+				{{#each cooments}}
+					<div id="post">
+						<b>{{author}}</b> (<b>{{date}}</b>)
+						<p>{{{text}}}</p>
+					</div>
+				{{/each}}
+			</div>
+
+			{{> sidebar}}
+
+			<div id = "clear"></div>
+		</div>
+
+		{{> footer}}
+	</body>
+</html>

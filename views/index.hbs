@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Какой-то сайт.ru</title>
+		<meta charset="utf-8">
+    <link rel="stylesheet" href="/style.css">
+	</head>
+
+	<body>
+		{{> header}}
+
+		<div id = "box">
+			<div id = "content">
+				{{#each posts}}
+					<div id = "post">
+						<div id="meta">
+							<span><a href="{{url}}#comments" title="Комментарии"><img src="/img/comments.png"> <b>0</b></a></span>
+							<span><a href="{{url}}" title="Рубрика"><img src="/img/category.png"> <b>{{category}}</b></a></span>
+							<span><a href="{{url}}" title="Автор"><img src="/img/author.png"> <b>{{author}}</b></a></span>
+							<span><a href="{{url}}" title="Дата создания статьи"><img src="/img/calendar.png"> <b>{{date}}</b></a></span>
+						</div>
+
+						<a href="{{url}}"><img src="img/about.png" alt="{{title}}"></a>
+						<a href="{{url}}"><h2>{{title}}</h2></a>
+
+						<p>{{description}}...</p>
+
+						<br>
+
+						<a href="{{url}}" class="button">Читать далее >></a>
+					</div>
+				{{/each}}
+			</div>
+
+			{{> sidebar}}
+
+			<div id = "clear"></div>
+		</div>
+
+		{{> footer}}
+	</body>
+</html>
